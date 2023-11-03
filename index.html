@@ -3,17 +3,51 @@
 <head>
   <meta charset="UTF-8"/>
   <title>Memory Game!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/slate/bootstrap.min.css">
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="memory-game.css"/>
 </head>
 <body>
+  <header>
+    <div class="container col-12 center">
+      <h1>Memory Game!</h1>
+      <h4>Objective: match all color pairs.</h4>
+      <form action="#game" id="play-start">
+        <label for="num-of-tiles">Number of Tiles: </label>
+        <input type="number" step="2" min="4" max="20" value="10" name="num-of-tiles" id="num-of-tiles">
+        <label for="play"></label>
+        <input type="submit" value="PLAY" id="play" name="play" autofocus>
+      </form>
+    </div>
+  </header>
+  <main>
+    <div class="container col-12 left game-area">
+      <div id="game">
+      </div>
 
-<h1>Memory Game!</h1>
+      <div id="guess-count">
+        <p>TOTAL GUESSES: <span id="guess-count-num"></span></p>
+      </div>
 
-<div id="game">
+      <div id="best-record">
+        <p>BEST RECORD: <span id="best-record-num"></span></p>
+      </div>
 
-</div>
+      <div id="reset-button">
+        <form action="">
+          <label for="play-again"></label>
+          <input type="button" value="PLAY AGAIN?" name="play-again" id="play-again">
+        </form>
+      </div>
+    </div>
 
-<script src="memory-game.js"></script>
-
+  </main>
+  <footer>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="memory-game.js"></script>
 </body>
 </html>
